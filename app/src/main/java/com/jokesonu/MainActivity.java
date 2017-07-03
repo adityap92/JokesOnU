@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.Jokes;
 import com.jokesactivity.JokeActivity;
 
 
@@ -44,17 +43,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
 
-        Jokes joke = new Jokes();
+//        Jokes joke = new Jokes();
+//
+//        //TextView tv = (TextView) findViewById(R.id.instructions_text_view);
+//
+//        //tv.setText(joke.tellJoke());
+//
 
-        //TextView tv = (TextView) findViewById(R.id.instructions_text_view);
 
-        //tv.setText(joke.tellJoke());
 
-        Intent intent = new Intent(this, JokeActivity.class);
-        intent.putExtra("joke", joke.tellJoke());
-        startActivity(intent);
-
+        new EndpointsAsyncTask().execute(this);
     }
-
 
 }
