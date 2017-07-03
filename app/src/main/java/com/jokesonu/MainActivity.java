@@ -1,13 +1,14 @@
 package com.jokesonu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.Jokes;
+import com.jokesactivity.JokeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -45,9 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
         Jokes joke = new Jokes();
 
-        TextView tv = (TextView) findViewById(R.id.instructions_text_view);
+        //TextView tv = (TextView) findViewById(R.id.instructions_text_view);
 
-        tv.setText(joke.tellJoke());
+        //tv.setText(joke.tellJoke());
+
+        Intent intent = new Intent(this, JokeActivity.class);
+        intent.putExtra("joke", joke.tellJoke());
+        startActivity(intent);
 
     }
 
