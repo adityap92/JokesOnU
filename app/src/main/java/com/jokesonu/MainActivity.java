@@ -1,13 +1,10 @@
 package com.jokesonu;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.jokesactivity.JokeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,15 +39,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-
-//        Jokes joke = new Jokes();
-//
-//        //TextView tv = (TextView) findViewById(R.id.instructions_text_view);
-//
-//        //tv.setText(joke.tellJoke());
-//
-
-
 
         new EndpointsAsyncTask().execute(this);
     }
