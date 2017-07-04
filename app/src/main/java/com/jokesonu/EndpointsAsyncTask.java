@@ -14,6 +14,9 @@ import com.jokesactivity.JokeActivity;
 import java.io.IOException;
 
 /**
+ * AsyncTask that pulls joke from javaJokes library
+ * Starts activity with joke passed in as intent
+ *
  * Created by aditya on 7/3/17.
  */
 
@@ -52,6 +55,7 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
+        //create intent for JokeActivity from jokesactivity library
         Intent intent = new Intent(context, JokeActivity.class);
         intent.putExtra("joke", result);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

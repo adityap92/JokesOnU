@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jokesonu.R;
-
 /**
  * Created by aditya on 7/3/17.
  */

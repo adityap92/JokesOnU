@@ -6,7 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
+/**
+ * MainActivity used by both free and paid apps
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -38,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //begin AsyncTask to pull joke from javaJokes library
     public void tellJoke(View view) {
-
         new EndpointsAsyncTask().execute(this);
     }
 

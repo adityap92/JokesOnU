@@ -3,6 +3,7 @@ package com.example;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class Jokes {
 
     ArrayList<String> jokesList;
@@ -11,7 +12,7 @@ public class Jokes {
 
     public Jokes(){
         r = new Random();
-
+        //add Jokes to joke list
         jokesList = new ArrayList<String>();
         jokesList.add("Yo momma");
         jokesList.add("The midget fortune teller who kills his customers is a small medium at large.");
